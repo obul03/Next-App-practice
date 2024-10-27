@@ -10,6 +10,11 @@ const inter = Inter(
   variable: '--font-inter'
   }
 );
+const ibmPlexSerif = IBM_Plex_Serif({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-ibm-plex-serif'
+})
 
 export const metadata: Metadata = {
   title: "Next App",
@@ -24,9 +29,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable}  antialiased`}
+        className={`${inter.variable} ${ibmPlexSerif.variable}  antialiased`}
       >
         {children}
+
       </body>
     </html>
   );
